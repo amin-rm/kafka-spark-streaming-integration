@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>binod.suman</groupId>
+	<artifactId>spark</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>spark</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scala.version>2.12.15</scala.version>
+		<spark.version>3.5.0</spark.version>
+		<kafka.version>3.8.0</kafka.version>
+	</properties>
+
+	<dependencies>
+		<!-- Apache Spark Core -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.12</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- Apache Spark Streaming -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_2.12</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- Spark Streaming with Kafka -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql-kafka-0-10_2.12</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- Apache Kafka Clients -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+
+		<!-- Spark SQL for structured streaming -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.12</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- CSV support -->
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.4</version>
+		</dependency>
+
+		<!-- Commons Lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+		<!-- JUnit for testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.holdenkarau/spark-testing-base -->
+		<dependency>
+			<groupId>com.holdenkarau</groupId>
+			<artifactId>spark-testing-base_2.12</artifactId>
+			<version>3.5.0_2.0.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+</project>
